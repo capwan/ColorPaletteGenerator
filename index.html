@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Color Palette Generator</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <button class="theme-toggle" id="theme-toggle">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <div class="container">
+    <h1>Color Palette Generator</h1>
+
+    <div class="controls">
+      <button class="btn" id="generate-btn">
+        <i class="fas fa-sync-alt"></i>
+        Generate Palette
+      </button>
+
+      <div class="scheme-selector">
+        <button class="scheme-btn active" data-scheme="random">Random</button>
+        <button class="scheme-btn" data-scheme="analogous">Analogous</button>
+        <button class="scheme-btn" data-scheme="monochromatic">Monochromatic</button>
+        <button class="scheme-btn" data-scheme="triadic">Triadic</button>
+        <button class="scheme-btn" data-scheme="complementary">Complementary</button>
+      </div>
+
+      <button class="btn" id="check-contrast-btn">
+        <i class="fas fa-adjust"></i>
+        Check Contrast
+      </button>
+
+      <button class="btn" id="save-btn">
+        <i class="fas fa-heart"></i>
+        Save Palette
+      </button>
+    </div>
+
+    <div class="palette-container">
+      <!-- Color boxes will be generated here -->
+    </div>
+
+    <div class="export-options">
+      <button class="export-btn" data-format="hex">HEX</button>
+      <button class="export-btn" data-format="rgb">RGB</button>
+      <button class="export-btn" data-format="hsl">HSL</button>
+    </div>
+
+    <div class="saved-palettes">
+      <h2>Saved Palettes</h2>
+      <div class="saved-container" id="saved-container">
+        <!-- Saved palettes will appear here -->
+      </div>
+    </div>
+  </div>
+
+  <div class="notification" id="notification">
+    Copied to clipboard!
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
